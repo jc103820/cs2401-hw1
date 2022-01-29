@@ -1,2 +1,3 @@
 # CS2401HW
-Homework Swag
+Jansen Craft
+HW1

@@ -19,7 +19,7 @@ functions that you will be creating in your Checkbook class (12 in total).
 #include <fstream>
 #include <string>
 #include "check.h"
-//#include "checkbook.h"
+#include "checkbook.h"
 using namespace std;
 
 /* This function shows the user the menu, asks them to enter their 
@@ -64,7 +64,7 @@ int main(){
 				//cout << "Your account balance: $" << mychecks.get_balance();
 				break;
 			case 4:
-				//mychecks.show_all(cout);
+				mychecks.show_all(cout);
 				break;
 			case 5:
 				cout << "Enter the Check Number of the Check to be removed: ";

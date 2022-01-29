@@ -1,0 +1,14 @@
+1. write the implementations for the write_check function (an input function)
+2. the output function.
+
+Next you are to create checkbook.h and checkbook.cc. Your checkbook objects will consist of 
+an array capable of holding 200 checks
+a number to keep track of how full that array is
+a balance (which says 
+how much money is in the checking account)
+a variable for the next available check num
+
+By 
+looking at the main, you can see the names of the functions that you are to write for the checkbook 
+class. (The main that I gave you is also a file you should not change except to uncomment the checkbook 
+class calls.) These will give the user the ability to:
