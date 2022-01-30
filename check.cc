@@ -40,7 +40,6 @@ void Check::write_check(std::istream& ins){
 
 	} else { //If from file stream
 		getline(ins, temp); //checknum
-		//TODO ?? maybe dont look at line?
 		checknum = stoi(temp);
 
 		ins >> date; //date

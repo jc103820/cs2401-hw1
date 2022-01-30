@@ -27,10 +27,13 @@ void Checkbook::load_from_file(istream& ifs){
     next_avail = stoi(temp);
 
     while(!ifs.eof()){
-        //TODO if empty line dont use it. break
         list[used].write_check(ifs);
         used++;
     }
+}
+
+double Checkbook::get_balance(){
+    return balance;
 }
 
 void Checkbook::show_all(ostream& cout){

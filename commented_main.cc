@@ -61,7 +61,7 @@ int main(){
 				//mychecks.write_check(cin);
 				break;
 			case 3:
-				//cout << "Your account balance: $" << mychecks.get_balance();
+				cout << "Your account balance: $" << mychecks.get_balance();
 				break;
 			case 4:
 				mychecks.show_all(cout);

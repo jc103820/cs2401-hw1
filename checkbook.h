@@ -21,7 +21,7 @@ class Checkbook{
         //void write_check(istream& cin);
 
         //See the checkbook balance
-        //double get_balance();
+        double get_balance();
 
         /*See a listing of all the checks that they have written – for each check they should see all the 
         information about that check */
