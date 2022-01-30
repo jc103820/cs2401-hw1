@@ -45,7 +45,7 @@ int main(){
 
 	// if no file this is first running for this user
     if(!ifs.fail()){ 
-		//	mychecks.load_from_file(ifs);
+		mychecks.load_from_file(ifs);
 		ifs.close();
     }
 

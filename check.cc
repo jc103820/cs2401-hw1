@@ -64,7 +64,7 @@ void Check::output(std::ostream& outs)const{
 		outs << "CHECKNUM: " << checknum << endl;
 		outs << "DATE: " << date << endl;
 		outs << "PAYTO: " << payto << endl;
-		outs << "AMOUNT: " << fixed << setprecision(2) << amount << endl;
+		outs << "AMOUNT: " << fixed << setprecision(2) << amount << endl << endl;
 
 	} else { //If to file stream
 		outs << checknum << endl;

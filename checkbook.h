@@ -1,6 +1,7 @@
 
 #include "check.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Checkbook{
@@ -10,7 +11,7 @@ class Checkbook{
 
         Checkbook();
          // Have their checkbook reloaded from the backup file – so they do not re-enter their checks every time they start the program.
-        //void load_from_file(istream& ifs);
+        void load_from_file(istream& ifs);
         
         // Make a deposit into their checkbook.
         //void deposit(double depamount);
