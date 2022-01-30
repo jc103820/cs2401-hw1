@@ -45,7 +45,7 @@ class Checkbook{
         //void show(string str1);
 
         /*Find the average of all the checks written */
-        //double average();
+        double average();
 
         /*Have the checkbook backed up to the same file that it was read from at the beginning of the 
         program, upon exiting the program (the main calls the save function – you write the save 

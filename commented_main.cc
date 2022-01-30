@@ -88,7 +88,7 @@ int main(){
 				//mychecks.show(payto_find);
 				break;
 			case 10:
-				//cout << "Your average check amount: $" << mychecks.average();
+				cout << "Your average check amount: $" << mychecks.average();
 				break;
 			case 0:
 				cout << "Thank you for using the Checkbook program.\n";
