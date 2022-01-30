@@ -102,7 +102,7 @@ int main(){
 
 	ofs.open(userfile.c_str());
 	if(!ofs.fail()){
-		//mychecks.save(ofs);
+		mychecks.save(ofs);
 	    ofs.close();
 	}
 

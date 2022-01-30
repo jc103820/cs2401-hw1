@@ -26,9 +26,8 @@ void Checkbook::load_from_file(istream& ifs){
     getline(ifs, temp);
     next_avail = stoi(temp);
 
-    cout << "Balance: " << balance << endl;
-    cout << "Next: " << next_avail << endl;
     while(!ifs.eof()){
+        //TODO if empty line dont use it. break
         list[used].write_check(ifs);
         used++;
     }
@@ -48,3 +47,11 @@ void Checkbook::show_all(ostream& cout){
     }    
 }
 
+void Checkbook::save(ostream& ofs){
+    ofs << fixed << setprecision(2) << balance << endl;
+    ofs << next_avail;
+    for (int i = 0; i < used; i++)
+    {
+        list[i].output(ofs);
+    }
+}

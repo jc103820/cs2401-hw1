@@ -50,7 +50,7 @@ class Checkbook{
         /*Have the checkbook backed up to the same file that it was read from at the beginning of the 
         program, upon exiting the program (the main calls the save function – you write the save 
         function) */
-        //void save(ostream& ofs);
+        void save(ostream& ofs);
 
     private:
         Check list[SIZE];

@@ -40,6 +40,7 @@ void Check::write_check(std::istream& ins){
 
 	} else { //If from file stream
 		getline(ins, temp); //checknum
+		//TODO ?? maybe dont look at line?
 		checknum = stoi(temp);
 
 		ins >> date; //date
@@ -67,10 +68,11 @@ void Check::output(std::ostream& outs)const{
 		outs << "AMOUNT: " << fixed << setprecision(2) << amount << endl << endl;
 
 	} else { //If to file stream
+		outs << endl;
 		outs << checknum << endl;
 		outs << date << endl;
 		outs << payto << endl;
-		outs << amount << endl;
+		outs << amount;
 	}
 }
 
