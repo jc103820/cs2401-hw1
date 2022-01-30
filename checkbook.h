@@ -14,7 +14,7 @@ class Checkbook{
         void load_from_file(istream& ifs);
         
         // Make a deposit into their checkbook.
-        //void deposit(double depamount);
+        void deposit(double depamount);
 
         /* Write a check – the user cannot enter the check-number, the check number will be inserted by 
         the checkbook using the set_chk_num() function of the Check class. */

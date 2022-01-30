@@ -14,5 +14,3 @@ never available again.
 
 10. Find and view all the checks written to a particular payee along with the total amount of those 
 checks.
-
-11. Find the average of all the checks written.

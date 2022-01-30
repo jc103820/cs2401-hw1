@@ -55,7 +55,7 @@ int main(){
 			case 1:
 				cout << "Please enter amount of the deposit: $";
 				cin >> depamount;
-				//mychecks.deposit(depamount);
+				mychecks.deposit(depamount);
 				break;
 			case 2:
 				//mychecks.write_check(cin);
@@ -91,6 +91,7 @@ int main(){
 				cout << "Your average check amount: $" << mychecks.average();
 				break;
 			case 0:
+
 				cout << "Thank you for using the Checkbook program.\n";
 				cout << "All alterations to the checkbook will now be saved.\n";
 				break;

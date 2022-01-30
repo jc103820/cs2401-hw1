@@ -32,6 +32,10 @@ void Checkbook::load_from_file(istream& ifs){
     }
 }
 
+void Checkbook::deposit(double depamount){
+    balance += depamount;
+}
+
 double Checkbook::get_balance(){
     return balance;
 }
