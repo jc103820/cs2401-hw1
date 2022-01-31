@@ -58,7 +58,7 @@ int main(){
 				mychecks.deposit(depamount);
 				break;
 			case 2:
-				//mychecks.write_check(cin);
+				mychecks.write_check(cin);
 				break;
 			case 3:
 				cout << "Your account balance: $" << mychecks.get_balance();
@@ -69,7 +69,7 @@ int main(){
 			case 5:
 				cout << "Enter the Check Number of the Check to be removed: ";
 				cin >> rmnum;
-				//mychecks.remove(rmnum);
+				mychecks.remove(rmnum);
 				break;
 			case 6:
 				//mychecks.number_sort();

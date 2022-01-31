@@ -10,6 +10,10 @@ class Checkbook{
         static const size_t SIZE = 200;
 
         Checkbook();
+
+        //Swap objects
+        void swap(int a, int b);
+
          // Have their checkbook reloaded from the backup file – so they do not re-enter their checks every time they start the program.
         void load_from_file(istream& ifs);
         
@@ -18,7 +22,7 @@ class Checkbook{
 
         /* Write a check – the user cannot enter the check-number, the check number will be inserted by 
         the checkbook using the set_chk_num() function of the Check class. */
-        //void write_check(istream& cin);
+        void write_check(istream& cin);
 
         //See the checkbook balance
         double get_balance();
@@ -29,7 +33,7 @@ class Checkbook{
 
         /*Remove a check by entering its check-number. Once a check is removed that check number is 
         never available again */
-        //void remove(int num);
+        void remove(int num);
 
         /*Sort the checks by check-number. */
         //void number_sort();

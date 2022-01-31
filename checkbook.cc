@@ -14,6 +14,14 @@ Checkbook::Checkbook(){
     balance = 0;
     next_avail = 0;
 }
+
+void Checkbook::swap(int a, int b){
+    Check tmp;
+    tmp = list[a];
+    list[a] = list[b];
+    list[b] = tmp;
+}
+
 void Checkbook::load_from_file(istream& ifs){
     string temp;
     getline(ifs, temp);
@@ -36,6 +44,15 @@ void Checkbook::deposit(double depamount){
     balance += depamount;
 }
 
+void Checkbook::write_check(istream& cin){
+    //TODO - doesnt work
+    // add new check object to the list
+    list[used].set_check_num(next_avail);
+    list[used].write_check(cin);
+    used++;
+    next_avail++;
+}
+
 double Checkbook::get_balance(){
     return balance;
 }
@@ -54,17 +71,13 @@ void Checkbook::show_all(ostream& cout){
     }   
 }
 
-/*
 void Checkbook::remove(int num){
     Check tmp;
     bool found = 0;
     for (int i = 0; i < used; i++){
         if (list[i].get_num() == num){
             found = 1;
-            //Put all of used data into i.
-            list[i] = list[used];
-            cout << "--" << endl;
-            list[i].output(cout);
+            swap(used - 1, i);
             used--;
         }
     }
@@ -72,7 +85,7 @@ void Checkbook::remove(int num){
         cout << "ERROR: Check not found" << endl;
     }
     
-} */
+}
 
 /*
 void number_sort(){
