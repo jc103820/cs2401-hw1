@@ -1,1 +1,13 @@
-8. Sort the checks alphabetically by the person to whom they were written.
+Documentation
+
+CS 2401 – Spring 2022
+Project 1 – Checkbook Class
+Due: 11:59 PM Friday, February 4th
+
+10. Find and view all the checks written to a particular payee along with the total amount of those 
+checks.
+
+// uppercase/ lowercase
+
+
+Submit check.cc, checkbook.h, checkbook.cc, and your own data file on Blackboard.

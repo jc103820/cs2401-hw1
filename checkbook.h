@@ -1,3 +1,10 @@
+/**
+ * @file checkbook.h
+ * @author Jansen Craft
+ * @brief This is the header file for the checkbook class. This class uses the Check class and thus the Date class to
+ * create an array of checks that the user can manipulate in various ways.
+ * @date 2022-01-31
+ */
 
 #include "check.h"
 #include <iostream>
@@ -11,52 +18,106 @@ class Checkbook{
 
         Checkbook();
 
-        //Swap objects
+        /**
+         * @brief Swaps the two Check objects in the list
+         * 
+         * @param a index of the first object
+         * @param b index of the second object
+         */
         void swap(int a, int b);
 
-         // Have their checkbook reloaded from the backup file – so they do not re-enter their checks every time they start the program.
+         /**
+          * @brief Has their checkbook reloaded from the backup file – so they do not re-enter their checks every time they start the program.
+          * 
+          * @param ifs 
+          */
         void load_from_file(istream& ifs);
         
-        // Make a deposit into their checkbook.
+        /**
+         * @brief Makes a deposit into their checkbook.
+         * 
+         * @param depamount 
+         */
         void deposit(double depamount);
 
-        /* Write a check – the user cannot enter the check-number, the check number will be inserted by 
-        the checkbook using the set_chk_num() function of the Check class. */
+        /**
+         * @brief Writes a check – the user cannot enter the check-number, the check number will be inserted by 
+        the checkbook using the set_chk_num() function of the Check class.
+         * 
+         * @param cin 
+         */
+
         void write_check(istream& cin);
 
-        //See the checkbook balance
+        /**
+         * @brief Get the balance object
+         * 
+         * @return double of the balance object
+         */
         double get_balance();
 
-        /*See a listing of all the checks that they have written – for each check they should see all the 
-        information about that check */
+        /**
+         * @brief Shows a listing of all the checks that they have written – for each check they should see all the 
+        information about that check
+         * 
+         * @param cout outstream to send the message to. Must be cout
+         */
         void show_all(ostream& cout);
 
-        /*Remove a check by entering its check-number. Once a check is removed that check number is 
-        never available again */
+        /**
+         * @brief Remove a check by entering its check-number. Once a check is removed that check number is 
+        never available again
+         * 
+         * @param num checknumber ot be removed
+         */
         void remove(int num);
 
-        /*Sort the checks by check-number. */
+        /**
+         * @brief Sorts the checks by check-number.
+         */
         void number_sort();
 
-        /*Sort the checks alphabetically by the person to whom they were written. */
+        /**
+         * @brief Sorts the checks alphabetically by the person to whom they were written.
+         */
         void payto_sort();
 
-        /*Sort the checks by the date they were written. */
+        /**
+         * @brief Sorts the checks by the date they were written.
+         */
         void date_sort();
-
-        /*Find and view all the checks written to a particular payee along with the total amount of those 
-        checks */
+    
+        /**
+         * @brief Finds and views all the checks written to a particular payee along with the total amount of those 
+        checks
+         * 
+         * @param str1 
+         */
         void show(string str1);
 
-        /*Find the average of all the checks written */
+        /**
+         * @brief Finds the average of all the checks written
+         * 
+         * @return double - the average of all the checks written
+         */
         double average();
 
-        /*Have the checkbook backed up to the same file that it was read from at the beginning of the 
-        program, upon exiting the program (the main calls the save function – you write the save 
-        function) */
+        /**
+         * @brief Has the checkbook backed up to the same file that it was read from at the beginning of the 
+        program, upon exiting the program 
+         * 
+         * @param ofs out stream to send it to
+         */
         void save(ostream& ofs);
 
-        //Returns true if the first string is less than the second alphabetically
+        /**
+         * @brief Returns true if the first string is less than the second alphabetically
+         * 
+         * @param a first string
+         * @param b second string
+         * @return true if first string is  alphabetically less than the second
+         * @return false if the first string not  alphabetically less than the second
+         */
         bool greaterThanAlpha(string a, string b);
 
     private:

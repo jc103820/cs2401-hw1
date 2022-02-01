@@ -6,6 +6,15 @@
 	John Dolan			Ohio University EECS	September 2019
 	Patricia Lindner	Ohio University EECS	August 2021
 *************************************************************************/
+
+/**
+ * @file check.cc
+ * @author Jansen Craft
+ * @brief this the implementation file for the Check class. It allows the user to manipulate the check object,
+ *  i.e. create a Check, output a check etc
+ * @date 2022-01-31
+ */
+
 #include "check.h"
 #include <string>
 #include <iomanip>
@@ -23,6 +32,9 @@ void Check::write_check(std::istream& ins){
 	/* You are to write the implementation of this function to read 
 	from the keyboard or a file. Remember to use getline to read the 
 	payto.  */
+
+	// Writes a check from user or from a file
+
 	string temp;
 
 	if(&cin == &ins){ //If from CIN stream
@@ -58,6 +70,9 @@ void Check::output(std::ostream& outs)const{
 	/* You are to write the implementation of this function to write 
 	to the monitor or to a file. Remember not to put labels into the 
 	file.*/
+
+	// Prints a check out to the console or to a file
+
 	string temp;
 
 	if(&cout == &outs){ //If to COUT stream

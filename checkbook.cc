@@ -1,7 +1,11 @@
-/*************************************************************************
-Jansen Craft
-Chechbook Class Implementation
-*************************************************************************/
+/**
+ * @file checkbook.cc
+ * @author Jansen Craft
+ * @brief  This is the implementation file for the checkbook class. This class uses the Check class and thus the Date class to
+ * create an array of checks that the user can manipulate in various ways.
+ * @date 2022-01-31
+ */
+
 #include "checkbook.h"
 #include <iomanip>
 #include <fstream>
@@ -45,7 +49,6 @@ void Checkbook::deposit(double depamount){
 }
 
 void Checkbook::write_check(istream& cin){
-    // add new check object to the list
     list[used].set_check_num(next_avail);
     list[used].write_check(cin);
     used++;
@@ -135,9 +138,22 @@ void Checkbook::date_sort(){
 }
 
 void Checkbook::show(string str1){
+    string lowerstr1 = "";
+    string lowertemp = "";
+
+    //str1 to lowercase str1
+    for (size_t i = 0; i < str1.length(); i++){
+        lowerstr1 += tolower(str1[i]);
+    }
+    
     int total = 0;
     for (int i = 0; i < used; i++){
-        if (list[i].get_payto() == str1){
+        lowertemp = "";
+        //turns current Check's name to a lowercase version and stores in lowertemp
+        for (size_t j = 0; j < list[i].get_payto().length(); j++){
+            lowertemp += tolower(list[i].get_payto()[j]);
+        }
+        if (lowertemp == lowerstr1){
             list[i].output(cout);
             total++;
         }
