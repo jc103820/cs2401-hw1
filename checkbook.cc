@@ -93,6 +93,17 @@ void number_sort(){
     cout << "Not Finished" << endl;
 } */
 
+void Checkbook::show(string str1){
+    int total = 0;
+    for (int i = 0; i < used; i++){
+        if (list[i].get_payto() == str1){
+            list[i].output(cout);
+            total++;
+        }
+    }
+    cout << "Total checks to " << str1 << ": " << total << endl;
+}
+
 double Checkbook::average(){
     double total = 0;
     for (int i = 0; i < used; i++)

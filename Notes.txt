@@ -1,9 +1,3 @@
-3. Write a check – the user cannot enter the check-number, the check number will be inserted by 
-the checkbook using the set_chk_num() function of the Check class.
-
-6. Remove a check by entering its check-number. Once a check is removed that check number is 
-never available again.
-
 7. Sort the checks by check-number.
 
 8. Sort the checks alphabetically by the person to whom they were written.

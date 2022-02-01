@@ -85,7 +85,7 @@ int main(){
 					cin.ignore(); // clear out leftover newlines
 				}
 				getline(cin, payto_find);
-				//mychecks.show(payto_find);
+				mychecks.show(payto_find);
 				break;
 			case 10:
 				cout << "Your average check amount: $" << mychecks.average();

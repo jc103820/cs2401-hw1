@@ -46,7 +46,7 @@ class Checkbook{
 
         /*Find and view all the checks written to a particular payee along with the total amount of those 
         checks */
-        //void show(string str1);
+        void show(string str1);
 
         /*Find the average of all the checks written */
         double average();
