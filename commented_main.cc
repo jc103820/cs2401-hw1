@@ -75,7 +75,7 @@ int main(){
 				mychecks.number_sort();
 				break;
 			case 7:
-				//mychecks.payto_sort();
+				mychecks.payto_sort();
 				break;
 			case 8:
 				mychecks.date_sort();

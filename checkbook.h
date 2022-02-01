@@ -39,7 +39,7 @@ class Checkbook{
         void number_sort();
 
         /*Sort the checks alphabetically by the person to whom they were written. */
-        //void payto_sort();
+        void payto_sort();
 
         /*Sort the checks by the date they were written. */
         void date_sort();
@@ -55,6 +55,9 @@ class Checkbook{
         program, upon exiting the program (the main calls the save function – you write the save 
         function) */
         void save(ostream& ofs);
+
+        //Returns true if the first string is less than the second alphabetically
+        bool greaterThanAlpha(string a, string b);
 
     private:
         Check list[SIZE];

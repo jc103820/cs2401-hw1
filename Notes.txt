@@ -1,8 +1,1 @@
-7. Sort the checks by check-number.
-
 8. Sort the checks alphabetically by the person to whom they were written.
-
-9. Sort the checks by the date they were written.
-
-10. Find and view all the checks written to a particular payee along with the total amount of those 
-checks.
