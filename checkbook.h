@@ -36,13 +36,13 @@ class Checkbook{
         void remove(int num);
 
         /*Sort the checks by check-number. */
-        //void number_sort();
+        void number_sort();
 
         /*Sort the checks alphabetically by the person to whom they were written. */
         //void payto_sort();
 
         /*Sort the checks by the date they were written. */
-        //void date_sort();
+        void date_sort();
 
         /*Find and view all the checks written to a particular payee along with the total amount of those 
         checks */

@@ -72,13 +72,13 @@ int main(){
 				mychecks.remove(rmnum);
 				break;
 			case 6:
-				//mychecks.number_sort();
+				mychecks.number_sort();
 				break;
 			case 7:
 				//mychecks.payto_sort();
 				break;
 			case 8:
-				//mychecks.date_sort();
+				mychecks.date_sort();
 				break;
 			case 9:
 				while(cin.peek() == '\n' || cin.peek() == '\r'){

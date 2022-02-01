@@ -45,7 +45,6 @@ void Checkbook::deposit(double depamount){
 }
 
 void Checkbook::write_check(istream& cin){
-    //TODO - doesnt work
     // add new check object to the list
     list[used].set_check_num(next_avail);
     list[used].write_check(cin);
@@ -87,11 +86,37 @@ void Checkbook::remove(int num){
     
 }
 
-/*
-void number_sort(){
-    //TODO
-    cout << "Not Finished" << endl;
-} */
+void Checkbook::number_sort(){
+    Check temp;
+    bool done = false;
+
+    while(!done){
+        done = true;
+        for (int i = 0; i < used - 1; i++){
+            if(list[i].get_num() > list[i + 1].get_num()){
+                swap(i, i + 1);
+                done = false;
+            }
+        }
+        
+    }
+}
+
+void Checkbook::date_sort(){
+    Check temp;
+    bool done = false;
+
+    while(!done){
+        done = true;
+        for (int i = 0; i < used - 1; i++){
+            if(list[i].get_date() > list[i + 1].get_date()){
+                swap(i, i + 1);
+                done = false;
+            }
+        }
+        
+    }
+}
 
 void Checkbook::show(string str1){
     int total = 0;
